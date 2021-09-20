@@ -123,24 +123,19 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">@lang('site.'.$lang->translation_lang.'.description')
+                                            <label
+                                                for="exampleInputEmail1">@lang('site.'.$lang->translation_lang.'.description')
                                             </label>
                                             <textarea name="service[0][description]" style="margin-top: 5px; width:100%"
                                                 class="form-control "
                                                 placeholder="@lang('site.'.$lang->translation_lang.'.description')" rows="3"
                                                 cols="12">{{ $lang->description }}</textarea>
-            
+
                                         </div>
 
                                     </div>
                                     <button type="submit" class="btn btn-info mt-3 mb-0">@lang('site.edit')</button>
                                 </form>
-
-
-
-
-
-
                             </div>
                         @endforeach
 

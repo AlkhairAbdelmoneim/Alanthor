@@ -12,6 +12,8 @@ class WelcomeController extends Controller
 {
     public function index()
     {
+        $lan = getCurrentLocale();
+        
         $services = Services::where('translation_lang' ,getDefaultLang())->paginate(PAGINATION_COUNT);
 
         dataFilter($services);
@@ -22,12 +24,18 @@ class WelcomeController extends Controller
 
     public function blog()
     {
+        $services = Services::where('translation_lang' ,getDefaultLang())->paginate(PAGINATION_COUNT);
+
+        dataFilter($services);
         $blogs = Blog::where('translation_lang' ,getDefaultLang())->paginate(PAGINATION_COUNT);
-        return view('blog' ,compact('blogs'));
+        return view('blog' ,compact('blogs' ,'services'));
     }
 
     public function single($id)
     {
+        $services = Services::where('translation_lang' ,getDefaultLang())->paginate(PAGINATION_COUNT);
+
+        dataFilter($services);
         $single = Blog::find($id);
 
         if (!$single) {
@@ -36,7 +44,7 @@ class WelcomeController extends Controller
 
         } else {
             
-            return view('single' ,compact('single'));
+            return view('single' ,compact('single' ,'services'));
 
         }
         

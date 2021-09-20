@@ -13,7 +13,7 @@
                     </li>
                     <li><a class="nav-link scrollto" href="#about">{{ trans('front.About') }}</a></li>
                     <li><a class="nav-link scrollto" href="#services">{{ trans('front.Services') }}</a></li>
-                    <li><a class="nav-link scrollto" href="{{ route('blog') }}">{{ trans('front.Blog') }}</a></li>
+                    <li><a class="nav-link scrollto" href="{{ route('blogs') }}">{{ trans('front.Blog') }}</a></li>
 
                     <li><a class="nav-link scrollto" href="#contact">{{ trans('front.Contact') }}</a></li>
 

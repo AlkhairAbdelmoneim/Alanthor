@@ -23,6 +23,8 @@ class HomeController extends Controller
     public function index()
     {
 
+        $lan = getCurrentLocale();
+
         $BlogCount = Blog::count();
         $last_blogs = Blog::orderBy('created_at' , 'desc')->take(4)->get();
         
@@ -33,7 +35,7 @@ class HomeController extends Controller
         $last_contact = Contact::orderBy('created_at' , 'desc')->take(4)->get();
 
         $ProductCount = Product::count();
-        $last_product = Product::orderBy('created_at' , 'desc')->take(4)->get();
+        $last_product = Product::where('translation_lang' ,$lan)->orderBy('created_at' , 'desc')->take(4)->get();
 
         
 

@@ -20,7 +20,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     Route::get('/home', 'HomeController@index')->name('home');
 
-    Route::resource('services', 'ServicesController')->except(['show']);
+    // Route::resource('services', 'ServicesController')->except(['show']);
     Route::resource('contact', 'ContactController')->except(['show']);
     Route::resource('blog', 'BlogsController')->except(['show']);
     Route::resource('products', 'ProductsController')->except(['show']);
@@ -34,7 +34,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         Route::get('/', 'WelcomeController@index')->name('welcome');
         Route::post('client_store', 'WelcomeController@store')->name('client_store');
         Route::get('single{id}', 'WelcomeController@single')->name('single');
-        Route::get('blog', 'WelcomeController@blog')->name('blog');
+        Route::get('blogs', 'WelcomeController@blog')->name('blogs');
         
     });
 

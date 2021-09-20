@@ -87,6 +87,7 @@ class ProductsController extends Controller
                             'translation_of' => $service_id,
                             'name' => $value['name'],
                             'description' => $value['description'],
+                            'image' => $request_data['image'],
                         ];
                     }
         
@@ -181,11 +182,11 @@ class ProductsController extends Controller
     }
 
 
-    public function update(StoreService $request, Product $product ,$id)
+    public function update(StoreService $request ,$id)
     {
         // try {
             
-            $service = $product->where('id' ,$id)->get()[0];
+            $service = Product::where('id' ,$id)->get()[0];
 
             if ($request->image) {
                 

@@ -145,41 +145,11 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-xl-4 col-md-12 col-lg-6">
                 <div class="card">
                     <div class="card-header pb-1">
-                        <h3 class="card-title mb-2">اخر الخدمات المضافه</h3>
-                    </div>
-                    <div class="card-body p-0 customers mt-1">
-                        <div class="list-group list-lg-group list-group-flush">
-    
-                            @foreach ($last_ervices as $key => $value)
-                                <a class="list-group-item list-group-item-action" href="{{ route('services.index') }}">
-                                    <div class="media mt-0">
-                                        <img class="avatar-lg rounded-circle ml-3 my-auto"
-                                            src="{{ $value->image_path }}" alt="Image description" title="image" alt="No image found">
-                                        <div class="media-body">
-                                            <div class="d-flex align-items-center">
-                                                <div class="mt-1">
-                                                    <h5 class="mb-1 tx-15">{{ $value->name }}</h5>
-                                                    <p class="mb-0 tx-13 text-muted">
-                                                        {{ $value->created_at->toFormattedDateString() }}<span
-                                                            class="text-danger ml-2">{{-- $value->course->name --}}</span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            @endforeach
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-12 col-lg-6">
-                <div class="card">
-                    <div class="card-header pb-1">
-                        <h3 class="card-title mb-2">اخر المنتجات المضافة</h3>
+                        <h3 class="card-title mb-2">اخر الخدمات المضافة</h3>
                     </div>
                     <div class="card-body p-0 customers mt-1">
                         <div class="list-group list-lg-group list-group-flush">

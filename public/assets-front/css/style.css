@@ -13,9 +13,17 @@ a {
   color: #fff;
   text-decoration: none;
   background-color: #B56740;
-  padding: 0 10px;
+  padding: 10px 10px;
   border-radius: 3px;
   text-decoration: none;
+}
+
+.a_link:hover{
+  color: #8a360c;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid #8a360c;
+  transition-duration: 1s;
 }
 
 a:hover {
@@ -121,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo {
-  font-size: 30px;
+  font-size: 24px;
   margin: 0;
   padding: 0;
   line-height: 0;
@@ -504,6 +512,7 @@ h1, h2, h3, h4, h5, h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+  box-shadow: 0px 0px 20px #B76345;
 }
 
 .section-bg {
